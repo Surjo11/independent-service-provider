@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
 const CheckOut = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div></div>;
 };
 
 export default CheckOut;
