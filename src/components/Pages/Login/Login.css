@@ -1,0 +1,23 @@
+.login-image {
+  height: 600px;
+  width: 450px;
+  border-radius: 10px;
+}
+
+.or-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.border1 {
+  border: 1px solid gainsboro;
+  width: 200px;
+  height: 0;
+}
+
+.border2 {
+  border: 1px solid gainsboro;
+  width: 200px;
+  height: 0;
+}
