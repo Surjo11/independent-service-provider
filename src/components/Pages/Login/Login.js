@@ -20,11 +20,11 @@ const Login = () => {
   const [signInWithGithub, userOfGit] = useSignInWithGithub(auth);
 
   useEffect(() => {
-    if (userOfEmailPass) {
+    if (!userOfEmailPass) {
       navigate(from, { replace: true });
     }
   });
-  
+
   useEffect(() => {
     if (userOfGit) {
       navigate(from, { replace: true });
