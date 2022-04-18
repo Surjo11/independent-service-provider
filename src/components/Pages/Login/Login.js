@@ -7,6 +7,9 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import "./Login.css";
+import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
+import toast, { Toaster } from "react-hot-toast";
+
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -16,6 +19,8 @@ const Login = () => {
 
   const [signInWithEmailAndPassword, userOfEmailPass] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   const [signInWithGithub, userOfGit] = useSignInWithGithub(auth);
 
@@ -36,6 +41,12 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
+  };
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    toast.success("Please Check your mail for Reset");
   };
 
   const handelGithub = (event) => {
@@ -86,32 +97,14 @@ const Login = () => {
               required=""
             />
           </div>
-          <div className="flex items-start">
-            <div className="flex items-start">
-              <div className="flex items-center h-5">
-                <input
-                  id="remember"
-                  aria-describedby="remember"
-                  type="checkbox"
-                  className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                  required=""
-                />
-              </div>
-              <div className="ml-3 text-sm">
-                <label
-                  htmlFor="remember"
-                  className="font-medium text-gray-900 dark:text-gray-300"
-                >
-                  Remember me{" "}
-                  <a
-                    href="#"
-                    className="ml-auto text-xs text-blue-700 hover:underline dark:text-blue-500"
-                  >
-                    Reset Password?
-                  </a>
-                </label>
-              </div>
-            </div>
+          <div className="ml-3 text-sm">
+            <button
+              onClick={resetPassword}
+              className="ml-auto text-xs text-blue-700 hover:underline dark:text-blue-500"
+            >
+              Forgot Password?
+            </button>
+            <Toaster position="top-center" reverseOrder={false} />
           </div>
           <button
             type="submit"

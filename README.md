@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# El Sol Photography
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Live Site- [https://laptop-heaven-b81b11.netlify.app/](https://laptop-heaven-b81b11.netlify.app/) -->
+
+## Project details down below:
+
+- This is Wedding based Photography Website.
+- Provide Services by Single person not any company or organization.
+- Provided many Services by combo with reasonable Price tag.
+- Answers some Questions.
+- Describes about my goals and how i achieve.
+- Used firebase authentication to secure website.
+- Used React route,tailwind components,toast and many more.
+
+## List of libraries
+
+- Used some libraries like React,Tailwind and Firebase-authentication-hooks.
 
 ## Available Scripts
 
@@ -68,4 +82,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # independent-service-provider-Surjo11
