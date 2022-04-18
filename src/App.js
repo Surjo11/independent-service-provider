@@ -9,6 +9,7 @@ import Header from "./components/Shared/Header/Header";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 import Blog from "./components/Pages/Blog/Blog";
 import Register from "./components/Pages/Register/Register";
+import NotFound from "./components/Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="about" element={<About></About>} />
         <Route path="login" element={<Login></Login>} />
         <Route path="register" element={<Register></Register>} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
     </div>
