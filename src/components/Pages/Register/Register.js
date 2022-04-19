@@ -9,7 +9,7 @@ const Register = () => {
   const passwordRef = useRef("");
   const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   useEffect(() => {
     if (user) {
