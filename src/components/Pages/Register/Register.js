@@ -1,13 +1,22 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
-import "./Register.css"
+import "./Register.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const [createUserWithEmailAndPassword] =
+  const navigate = useNavigate();
+  const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/home");
+    }
+  });
+
   const handelRegister = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
@@ -61,6 +70,15 @@ const Register = () => {
           >
             Register
           </button>
+          <div className="text-xs font-medium text-gray-500 dark:text-gray-300">
+            Already have account?{" "}
+            <Link
+              to="/login"
+              className="text-blue-700 hover:underline dark:text-blue-500"
+            >
+              Login
+            </Link>
+          </div>
         </form>
       </div>
     </div>
