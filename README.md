@@ -10,11 +10,14 @@
 - Answers some Questions.
 - Describes about my goals and how i achieve.
 - Used firebase authentication to secure website.
-- Used React route,tailwind components,toast and many more.
+- Used React route,firebase authentication,tailwind components,react hot toast and many more.
 
 ## List of libraries
 
-- Used some libraries like React,Tailwind and Firebase-authentication-hooks.
+1. React (Javascript Library)
+2. Tailwind (Css Library)
+3. Flowbite (Tailwind Components Library)
+4. Firebase-authentication-hooks (Firebase Library)
 
 ## Available Scripts
 

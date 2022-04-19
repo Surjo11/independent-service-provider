@@ -13,8 +13,10 @@ const Blog = () => {
           specific data,file or resources.Authorization mainly maintained by a
           organization who are concerned about our security.
           <br />
-          <span className="font-bold text-lg">Authentication</span>Authentication verifies the users.
-          It's works through OTP(one time password),passwords and many more.It's the first step to access our resources.
+          <span className="font-bold text-lg">Authentication</span>
+          Authentication verifies the users. It's works through OTP(one time
+          password),passwords and many more.It's the first step to access the
+          resources.
         </p>
       </article>
       <article className="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -23,9 +25,11 @@ const Blog = () => {
           implement authentication?
         </h5>
         <p className="font-normal text-gray-700 dark:text-gray-400">
-          Firebase owned by google.Mainly it's a complete package that allows to build web/mobile apps to improve quality.
-          Mainly i use firebase for authentication service to secure my website.
-          I can use many things to implement authentication  like password based,multi factor(2A),token based,biometric etc.
+          Firebase owned by google.Mainly it's a complete package that allows to
+          build web/mobile apps to improve quality. Mainly i use firebase for
+          authentication service to secure my website. I can use many things to
+          implement authentication like password based,email verify,multi
+          factor(2A),token based,biometric etc.
         </p>
       </article>
 
@@ -34,9 +38,11 @@ const Blog = () => {
           What other services does firebase provide other than authentication?
         </h5>
         <p className="font-normal text-gray-700 dark:text-gray-400">
-         Firebase is a complete package that allows us to improve and maintain our web/mobile apps quality.
-         They provide us many services than authentication like realtime database, Cloud firestore, Storage, Hosting and many more.
-         We can use them so easily and provide a quality and secure apps.
+          Firebase is a complete package that allows us to improve and maintain
+          our web/mobile apps quality. They provide us many services than
+          authentication like realtime database, Cloud firestore, Storage,
+          Hosting and many more. We can use them so easily and provide a quality
+          and secure apps.
         </p>
       </article>
     </div>

@@ -17,12 +17,21 @@ const Login = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  const [signInWithEmailAndPassword, userOfEmailPass] =
+  const [signInWithEmailAndPassword, userOfEmailPass, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   const [signInWithGithub, userOfGit] = useSignInWithGithub(auth);
+
+  // error section
+  useEffect(() => {
+    let errorElement;
+    if (error) {
+      errorElement = <p className="text-red-600">Error: {error?.message}</p>;
+      toast.error(errorElement);
+    }
+  });
 
   useEffect(() => {
     if (userOfEmailPass) {
@@ -97,6 +106,7 @@ const Login = () => {
               required=""
             />
           </div>
+          {/* {errorElement} */}
           <div className="ml-3 text-sm">
             <button
               onClick={resetPassword}
@@ -111,6 +121,7 @@ const Login = () => {
             className=" w-full text-white font-semibold bg-pink-400 hover:bg-pink-300 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Log in
+            <Toaster />
           </button>
           <div className="text-xs font-medium text-gray-500 dark:text-gray-300">
             Not registered?{" "}
