@@ -1,6 +1,11 @@
 # El Sol Photography
 
-<!-- Live Site- [https://laptop-heaven-b81b11.netlify.app/](https://laptop-heaven-b81b11.netlify.app/) -->
+Live Site- [https://wedding-photography-32f2e.web.app/](https://wedding-photography-32f2e.web.app/)
+
+# Special Note
+
+After React upgrade from version 17 to version 18. [Flowbite(Tailwind Components Library)] Some components doesn't work in Chrome Browser. It will be fix in next update of Flowbite. For now Please Download Mozilla Firefox for Pc [https://www.mozilla.org/en-US/firefox/new/](https://www.mozilla.org/en-US/firefox/new/), Mobile [https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&gl=US) 
+Sorry for your retardation
 
 ## Project details down below:
 
